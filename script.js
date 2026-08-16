@@ -221,7 +221,7 @@ if (slider) {
 function buyNowWhatsApp(name, price, btn) {
     const qtyInput = btn.parentElement.querySelector('.qty-selector input');
     const qty = parseInt(qtyInput.value);
-    const phoneNumber = "919146516144";
+    const phoneNumber = "919284411036";
 
     const message = `Hello Al BRR PERFUMES, I want to buy this immediately:%0A%0A*Product:* ${name}%0A*Price:* ₹${price}%0A*Quantity:* ${qty}%0A%0A Please guide me with the next steps.`;
 

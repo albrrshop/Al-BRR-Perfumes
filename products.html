@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Collection | Al BRR PERFUMES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;1,400&family=Montserrat:wght@200;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* --- Cleaned & Fixed CSS --- */
+        .product-page-body {
+            background: #0c0c0c;
+            color: #fff;
+        }
+
+        .search-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .search-box {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 15px 25px;
+            color: #fff;
+            font-family: 'Montserrat';
+            outline: none;
+            transition: 0.3s;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .search-box:focus {
+            border-color: #d4af37;
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .all-products {
+            padding: 0 8% 100px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: #d4af37;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .p-info {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .notes-preview {
+            font-size: 0.65rem;
+            color: #d4af37;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .product-card h3 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+
+        .p-desc {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .p-price {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .qty-selector {
+            display: flex;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 15px;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .qty-selector button {
+            background: none;
+            border: none;
+            color: #fff;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .qty-selector input {
+            width: 50px;
+            background: none;
+            border: none;
+            color: #fff;
+            text-align: center;
+            font-family: 'Montserrat';
+        }
+
+        .buy-now-btn {
+            width: 100%;
+            padding: 16px;
+            background: #d4af37;
+            color: #000;
+            border: none;
+            font-weight: 600;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .buy-now-btn:hover {
+            background: #fff;
+        }
+
+        .add-to-cart-btn {
+            width: 100%;
+            padding: 14px;
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            border-color: #d4af37;
+            color: #d4af37;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .product-img {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body class="product-page-body">
+
+    <nav>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <div class="logo">
+            <span class="BRR">Al BRR</span>
+            <span class="p-text">PERFUMES</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="cart-link">CART (0)</a></li>
+        </ul>
+
+    </nav>
+
+    <header class="page-header">
+        <h1 class="fade-in">The <i>Collection</i></h1>
+        <p class="sub-title">Artisan Scents by Abrar Pathan</p>
+    </header>
+
+    <div class="search-container fade-in">
+        <input type="text" placeholder="Search for your signature scent..." class="search-box">
+    </div>
+
+    <section class="all-products">
+        <div class="product-grid">
+
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('Perfu1.jpeg');"></div>
+                <div class="p-info">
+                    <span class="notes-preview">Oud • Leather • Tobacco</span>
+                    <h3>Midnight Oud</h3>
+                    <p class="p-desc">Rich, Smoky, Intense</p>
+                    <p class="p-price">₹2,499</p>
+                    <div class="qty-selector">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <input type="number" value="1" min="1" readonly>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="buy-now-btn" onclick="buyNowWhatsApp('Midnight Oud', '2499', this)">BUY NOW</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCartWithQty('Midnight Oud', '2499', 'https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=600', this)">ADD
+                        TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('Perfu2.jpeg');"></div>
+                <div class="p-info">
+                    <span class="notes-preview">Rose • Peony • Musk</span>
+                    <h3>Royal Rose</h3>
+                    <p class="p-desc">Delicate, Floral, Sweet</p>
+                    <p class="p-price">₹1,899</p>
+                    <div class="qty-selector">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <input type="number" value="1" min="1" readonly>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="buy-now-btn" onclick="buyNowWhatsApp('Royal Rose', '1899', this)">BUY NOW</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCartWithQty('Royal Rose', '1899', 'https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600', this)">ADD
+                        TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=600');">
+                </div>
+                <div class="p-info">
+                    <span class="notes-preview">Sea Salt • Sage • Grapefruit</span>
+                    <h3>Oceanic Mist</h3>
+                    <p class="p-desc">Fresh, Salty, Airy</p>
+                    <p class="p-price">₹1,499</p>
+                    <div class="qty-selector">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <input type="number" value="1" min="1" readonly>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="buy-now-btn" onclick="buyNowWhatsApp('Oceanic Mist', '1499', this)">BUY NOW</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCartWithQty('Oceanic Mist', '1499', 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=600', this)">ADD
+                        TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600');">
+                </div>
+                <div class="p-info">
+                    <span class="notes-preview">Amber • Vanilla • Patchouli</span>
+                    <h3>Golden Amber</h3>
+                    <p class="p-desc">Warm, Spicy, Sensual</p>
+                    <p class="p-price">₹2,199</p>
+                    <div class="qty-selector">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <input type="number" value="1" min="1" readonly>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="buy-now-btn" onclick="buyNowWhatsApp('Golden Amber', '2199', this)">BUY NOW</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCartWithQty('Golden Amber', '2199', 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600', this)">ADD
+                        TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"
+                    style="background-image: url('https://images.pexels.com/photos/1961795/pexels-photo-1961795.jpeg?auto=compress&cs=tinysrgb&w=600');">
+                </div>
+                <div class="p-info">
+                    <span class="notes-preview">Jasmine • Neroli • Sandalwood</span>
+                    <h3>Velvet Jasmine</h3>
+                    <p class="p-desc">Classic, White Floral</p>
+                    <p class="p-price">₹1,799</p>
+                    <div class="qty-selector">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <input type="number" value="1" min="1" readonly>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="buy-now-btn" onclick="buyNowWhatsApp('Velvet Jasmine', '1799', this)">BUY
+                        NOW</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCartWithQty('Velvet Jasmine', '1799', 'https://images.pexels.com/photos/1961795/pexels-photo-1961795.jpeg?auto=compress&cs=tinysrgb&w=600', this)">ADD
+                        TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"
+                    style="background-image: url('https://images.pexels.com/photos/3059609/pexels-photo-3059609.jpeg?auto=compress&cs=tinysrgb&w=600');">
+                </div>
+                <div class="p-info">
+                    <span class="notes-preview">Orange • Lemon • Bergamot</span>
+                    <h3>Citrus Bliss</h3>
+                    <p class="p-desc">Zesty, Bright, Energizing</p>
+                    <p class="p-price">₹1,299</p>
+                    <div class="qty-selector">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <input type="number" value="1" min="1" readonly>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="buy-now-btn" onclick="buyNowWhatsApp('Citrus Bliss', '1299', this)">BUY NOW</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCartWithQty('Citrus Bliss', '1299', 'https://images.pexels.com/photos/3059609/pexels-photo-3059609.jpeg?auto=compress&cs=tinysrgb&w=600', this)">ADD
+                        TO CART</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <span class="BRR">Al BRR</span>
+                    <span class="p-text">PERFUMES</span>
+                </div>
+                <p class="footer-about">Crafting timeless scents that define your presence. Experience the art of luxury
+                    perfumery with Abrar Pathan's private collection.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/albrrperfumerie?igsh=eXVzOGh2ZGd5ZmFk" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919146516144" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:Abrarpathan2009@gmail.com"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Collection</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="cart.html">Your Bag</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to get notified about new arrivals and private sales.</p>
+                <form class="footer-subscribe">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">JOIN</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Al BRR PERFUMES. Developed by Abrar Pathan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="cart.html" class="mobile-cart-btn">
+        🛒 View Cart
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

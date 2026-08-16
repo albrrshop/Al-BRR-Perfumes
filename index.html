@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al BRR PERFUMES | Luxury Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;1,400&family=Montserrat:wght@200;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="home-page">
+
+    <nav>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <div class="logo">
+            <span class="BRR">Al BRR</span>
+            <span class="p-text">PERFUMES</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="cart-link">CART (0)</a></li>
+        </ul>
+
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="sub-heading">THE PRIVATE COLLECTION</p>
+            <h1>Defining Your <br><i>Atmosphere</i></h1>
+            <div class="action-btn">
+                <a href="products.html" class="home-explore-btn">EXPLORE THE COLLECTION</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="product-section" id="featured">
+        <h2 class="section-title fade-in">Featured Scents</h2>
+        <div class="horizontal-scroll-wrapper">
+            <div class="product-grid horizontal-scroll">
+
+                <div class="product-card">
+                    <div class="product-img" style="background-image:url(Perfu1.jpeg);"></div>
+                    <div class="p-info">
+                        <h3>Midnight Oud</h3>
+                        <p class="p-desc">Deep, Woody, Mystic</p>
+                        <p class="p-price">₹1,499</p>
+                        <div class="qty-selector">
+                            <button onclick="changeQty(this,-1)">-</button>
+                            <input type="number" value="1" min="1" readonly>
+                            <button onclick="changeQty(this,1)">+</button>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyNowWhatsApp('Midnight Oud','1499',this)">BUY
+                            NOW</button>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCartWithQty('Midnight Oud','1499','https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=600',this)">ADD
+                            TO CART</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img" style="background-image:url('Perfu2.jpeg');"></div>
+                    <div class="p-info">
+                        <h3>Royal Rose</h3>
+                        <p class="p-desc">Floral, Sweet, Elegant</p>
+                        <p class="p-price">₹1,899</p>
+                        <div class="qty-selector">
+                            <button onclick="changeQty(this,-1)">-</button>
+                            <input type="number" value="1" min="1" readonly>
+                            <button onclick="changeQty(this,1)">+</button>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyNowWhatsApp('Royal Rose','1899',this)">BUY NOW</button>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCartWithQty('Royal Rose','1899','https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600',this)">ADD
+                            TO CART</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img" style="background-image:url('Perfu3.jpeg');"></div>
+                    <div class="p-info">
+                        <h3>Russian Oud</h3>
+                        <p class="p-desc">Fresh, Aqua, Daily</p>
+                        <p class="p-price">₹1,499</p>
+                        <div class="qty-selector">
+                            <button onclick="changeQty(this,-1)">-</button>
+                            <input type="number" value="1" min="1" readonly>
+                            <button onclick="changeQty(this,1)">+</button>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyNowWhatsApp('Oceanic Mist','1499',this)">BUY
+                            NOW</button>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCartWithQty('Oceanic Mist','1499','https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=600',this)">ADD
+                            TO CART</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image:url('https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600');">
+                    </div>
+                    <div class="p-info">
+                        <h3>Golden Amber</h3>
+                        <p class="p-desc">Warm, Spicy, Sensual</p>
+                        <p class="p-price">₹2,199</p>
+                        <div class="qty-selector">
+                            <button onclick="changeQty(this,-1)">-</button>
+                            <input type="number" value="1" min="1" readonly>
+                            <button onclick="changeQty(this,1)">+</button>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyNowWhatsApp('Golden Amber','2199',this)">BUY
+                            NOW</button>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCartWithQty('Golden Amber','2199','https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600',this)">ADD
+                            TO CART</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image:url('https://images.unsplash.com/photo-1615634262417-0a6a8c7a5f1a?q=80&w=600');">
+                    </div>
+                    <div class="p-info">
+                        <h3>Velvet Musk</h3>
+                        <p class="p-desc">Soft, Musky, Smooth</p>
+                        <p class="p-price">₹1,999</p>
+                        <div class="qty-selector">
+                            <button onclick="changeQty(this,-1)">-</button>
+                            <input type="number" value="1" min="1" readonly>
+                            <button onclick="changeQty(this,1)">+</button>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyNowWhatsApp('Velvet Musk','1999',this)">BUY NOW</button>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCartWithQty('Velvet Musk','1999','https://images.unsplash.com/photo-1615634262417-0a6a8c7a5f1a?q=80&w=600',this)">ADD
+                            TO CART</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image:url('https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=600');">
+                    </div>
+                    <div class="p-info">
+                        <h3>Silver Rain</h3>
+                        <p class="p-desc">Fresh, Cool</p>
+                        <p class="p-price">₹1,599</p>
+                        <div class="qty-selector">
+                            <button onclick="changeQty(this,-1)">-</button>
+                            <input type="number" value="1" min="1" readonly>
+                            <button onclick="changeQty(this,1)">+</button>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyNowWhatsApp('Silver Rain','1599',this)">BUY NOW</button>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCartWithQty('Silver Rain','1599','https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=600',this)">ADD
+                            TO CART</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image:url('https://images.unsplash.com/photo-1600180758890-6b94519a8ba8?q=80&w=600');">
+                    </div>
+                    <div class="p-info">
+                        <h3>Dark Vanilla</h3>
+                        <p class="p-desc">Sweet, Warm</p>
+                        <p class="p-price">₹2,099</p>
+                        <div class="qty-selector">
+                            <button onclick="changeQty(this,-1)">-</button>
+                            <input type="number" value="1" min="1" readonly>
+                            <button onclick="changeQty(this,1)">+</button>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyNowWhatsApp('Dark Vanilla','2099',this)">BUY
+                            NOW</button>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCartWithQty('Dark Vanilla','2099','https://images.unsplash.com/photo-1600180758890-6b94519a8ba8?q=80&w=600',this)">ADD
+                            TO CART</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image:url('https://images.unsplash.com/photo-1611080626919-7cf5a9f1f7c2?q=80&w=600');">
+                    </div>
+                    <div class="p-info">
+                        <h3>Crystal Bloom</h3>
+                        <p class="p-desc">Floral</p>
+                        <p class="p-price">₹1,799</p>
+                        <div class="qty-selector">
+                            <button onclick="changeQty(this,-1)">-</button>
+                            <input type="number" value="1" min="1" readonly>
+                            <button onclick="changeQty(this,1)">+</button>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyNowWhatsApp('Crystal Bloom','1799',this)">BUY
+                            NOW</button>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCartWithQty('Crystal Bloom','1799','https://images.unsplash.com/photo-1611080626919-7cf5a9f1f7c2?q=80&w=600',this)">ADD
+                            TO CART</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image:url('https://images.unsplash.com/photo-1608571423539-e951a5b2d5fd?q=80&w=600');">
+                    </div>
+                    <div class="p-info">
+                        <h3>Luxury Noir</h3>
+                        <p class="p-desc">Bold</p>
+                        <p class="p-price">₹2,699</p>
+                        <div class="qty-selector">
+                            <button onclick="changeQty(this,-1)">-</button>
+                            <input type="number" value="1" min="1" readonly>
+                            <button onclick="changeQty(this,1)">+</button>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyNowWhatsApp('Luxury Noir','2699',this)">BUY NOW</button>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCartWithQty('Luxury Noir','2699','https://images.unsplash.com/photo-1608571423539-e951a5b2d5fd?q=80&w=600',this)">ADD
+                            TO CART</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <span class="BRR">Al BRR</span>
+                    <span class="p-text">PERFUMES</span>
+                </div>
+                <p class="footer-about">Crafting timeless scents that define your presence. Experience the art of luxury
+                    perfumery with Abrar Pathan's private collection.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/albrrperfumerie?igsh=eXVzOGh2ZGd5ZmFk/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919146516144" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:Abrarpathan2009@gmail.com"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Collection</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="cart.html">Your Bag</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to get notified about new arrivals and private sales.</p>
+                <form class="footer-subscribe">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">JOIN</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Al BRR PERFUMES. Developed by Abrar Pathan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="cart.html" class="mobile-cart-btn">
+        🛒 View Cart
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

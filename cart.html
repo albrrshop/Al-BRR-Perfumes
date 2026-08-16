@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bag | Al BRR PERFUMES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;1,400&family=Montserrat:wght@200;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="cart-page">
+
+    <nav>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <div class="logo">
+            <span class="BRR">Al BRR</span>
+            <span class="p-text">PERFUMES</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="cart-link">CART (0)</a></li>
+        </ul>
+
+    </nav>
+
+    <header class="page-header">
+        <h1 class="fade-in">Shopping <i>Bag</i></h1>
+        <p class="sub-title">Review your luxury selection</p>
+    </header>
+
+    <section class="cart-container fade-in">
+        <div class="cart-items">
+            <p style="text-align: center; opacity: 0.5; padding: 50px;">Loading your selection...</p>
+        </div>
+
+        <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <span>₹0</span>
+            </div>
+            <div class="summary-line">
+                <span>Shipping</span>
+                <span style="color: #d4af37; font-size: 0.7rem; letter-spacing: 2px;">COMPLIMENTARY</span>
+            </div>
+            <hr style="border: none; border-bottom: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
+            <div class="summary-line total" style="font-size: 1.5rem; font-weight: 600;">
+                <span>Total</span>
+                <span>₹0</span>
+            </div>
+
+            <a href="javascript:void(0)" onclick="checkout()" class="checkout-btn">
+                ORDER VIA WHATSAPP
+            </a>
+
+            <p style="font-size: 0.6rem; opacity: 0.4; text-align: center; margin-top: 20px; letter-spacing: 2px;">
+                <i class="fab fa-whatsapp"></i> FAST & PERSONALIZED CHECKOUT
+            </p>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <span class="BRR">Al BRR</span>
+                    <span class="p-text">PERFUMES</span>
+                </div>
+                <p class="footer-about">Crafting timeless scents that define your presence. Experience the art of luxury
+                    perfumery with Abrar Pathan's private collection.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/albrrperfumerie?igsh=eXVzOGh2ZGd5ZmFk" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919146516144" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:Abrarpathan2009@gmail.com"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Collection</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="cart.html">Your Bag</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to get notified about new arrivals and private sales.</p>
+                <form class="footer-subscribe">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">JOIN</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Al BRR PERFUMES. Developed by Abrar Pathan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="cart.html" class="mobile-cart-btn">
+        🛒 View Cart
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

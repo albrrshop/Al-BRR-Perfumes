@@ -160,7 +160,7 @@ function checkout() {
     message += "--------------------------------------\n";
     message += "📍 *Please confirm delivery details.*";
 
-    const whatsappUrl = `https://wa.me/919146516144?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919284411036?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }
 

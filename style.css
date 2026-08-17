@@ -719,6 +719,10 @@ footer p,
     .footer-container {
         grid-template-columns: 1fr 1fr;
     }
+
+   .footer-subscribe button {
+      height: 30px;
+   }
 }
 
 @media (max-width: 600px) {

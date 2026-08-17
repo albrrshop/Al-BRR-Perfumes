@@ -739,6 +739,9 @@ footer p,
         flex-direction: column;
         gap: 10px;
     }
+
+   .footer-subscribe button {
+      height: 30px
 }
 
 /* Footer icons aur links se underline hatane ke liye */

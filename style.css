@@ -18,6 +18,22 @@ body {
 /* =========================================
    2. NAVIGATION (fixed Glassmorphism)
    ========================================= */
+
+   /* Align logo container elements side-by-side */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+/* Control logo size */
+.nav-logo-img {
+    height: 40px; /* Adjust size to match your navbar height */
+    width: auto;
+    object-fit: contain;
+    padding-right: 30px;
+}
+
 nav,
 .inner-nav {
     padding: 20px 8%;
@@ -61,7 +77,7 @@ nav,
 .nav-links a {
     text-decoration: none;
     color: #fff;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     letter-spacing: 2px;
     opacity: 0.6;
     transition: 0.3s;
@@ -719,10 +735,6 @@ footer p,
     .footer-container {
         grid-template-columns: 1fr 1fr;
     }
-
-   .footer-subscribe button {
-      height: 30px;
-   }
 }
 
 @media (max-width: 600px) {
@@ -745,8 +757,9 @@ footer p,
     }
 
     .footer-subscribe button {
-      height: 30px;
-   }
+        height: 30px;
+    }
+
 }
 
 /* Footer icons aur links se underline hatane ke liye */
